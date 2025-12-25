@@ -80,6 +80,47 @@
                             <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2">Experience the perfect mix of flavor and warmth. Every dish is crafted with fresh ingredients and a touch of passion. Join us for a memorable dining experience that delights the senses.</p>
                             <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+
+                            <style>
+.mail-btn {
+    padding: 16px 42px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg,#5f2cff,#a450ff,#ff4dd2);
+    background-size: 300% 300%;
+    cursor: pointer;
+    transition: all .4s ease;
+    animation: gradientFlow 6s ease infinite;
+    box-shadow: 0 10px 30px rgba(160,90,255,.35);
+}
+
+.mail-btn:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 18px 45px rgba(160,90,255,.55);
+}
+
+.mail-btn:active {
+    transform: scale(.96);
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
+
+<button class="mail-btn" onclick="window.location.href='mailto:Shashankmankar412@gmail.com?subject=Professional%20Inquiry'">
+Email Shashank Mankar
+</button>
+
+
+
+
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="img/hero.png" alt="">
