@@ -59,3 +59,24 @@ Location, contact numbers, and opening hours are clearly articulated.  [oai_cita
 │   └── scripts.js
 └── assets/
 └── images/
+
+---
+
+## Deployment Model
+Hosted on **Netlify**, the site benefits from:
+- Automated global distribution and caching
+- Fast load performance
+- Secure SSL infrastructure
+
+_No server infrastructure is required for static content delivery._
+
+---
+
+## Local Development Walkthrough
+Clone the repository and serve locally:
+
+```bash
+git clone https://github.com/shashank-77-77/restocafe.git
+cd restocafe
+open index.html
+
