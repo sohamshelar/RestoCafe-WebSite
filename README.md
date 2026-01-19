@@ -47,3 +47,15 @@ Location, contact numbers, and opening hours are clearly articulated.  [oai_cita
 ---
 
 ## Typical Project Structure
+/
+├── index.html
+├── about.html
+├── menu.html
+├── booking.html
+├── contact.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── scripts.js
+└── assets/
+└── images/
