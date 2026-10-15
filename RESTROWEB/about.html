@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>RestoCafe-About</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <title>RestoCafe - About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about RestoCafe, our story, food, chefs, and mission.">
+    <meta name="keywords" content="RestoCafe, restaurant, cafe, food, chefs">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -23,9 +24,9 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
@@ -33,297 +34,727 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+
+<div class="container-xxl bg-white p-0">
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary"
+             style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>RestoCafe</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+    <!-- Navbar & Hero Start -->
+    <div class="container-xxl position-relative p-0">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="text-primary m-0">
+                    <i class="fa fa-utensils me-3"></i>RestoCafe
+                </h1>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="menu.html" class="nav-item nav-link">Menu</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle"
+                           data-bs-toggle="dropdown">Pages</a>
+
+                        <div class="dropdown-menu m-0">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+
+                <a href="booking.html" class="btn btn-primary py-2 px-4">
+                    Book A Table
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
-                </div>
-            </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
-                        </ol>
-                    </nav>
-                </div>
+            </div>
+        </nav>
+
+
+        <!-- Hero Section -->
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+
+            <div class="container text-center my-5 pt-5 pb-4">
+
+                <h1 class="display-3 text-white mb-3 animated slideInDown">
+                    About Us
+                </h1>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Pages</a>
+                        </li>
+                        <li class="breadcrumb-item text-white active"
+                            aria-current="page">
+                            About
+                        </li>
+                    </ol>
+                </nav>
+
             </div>
         </div>
-        <!-- Navbar & Hero End -->
 
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>RestoCafe</h1>
-                        <p class="mb-4">Who we are 
-                                        RestoCafe is a cozy neighborhood spot where a love for great coffee meets a passion for fresh, flavorful food. Blending the warmth of a café with the comfort of a casual restaurant, it offers a relaxed place to work, meet, or unwind any time of day.​
-
-                                        Our story
-RestoCafe started with a simple idea: create a place where people could slow down, share good food, and feel at home. From a small dream and a handful of signature dishes, it has grown into a local favorite known for friendly faces and consistent quality.​</p>
-                        <p class="mb-4">At RestoCafe, our goal is simple — to create a place where everyone feels at home. Whether you're dining in or ordering online, we are dedicated to offering exceptional taste, consistent quality, and a memorable experience every time.</p>
-                        <div class="row g-4 mb-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
-                                    <div class="ps-4">
-                                        <p class="mb-0">Years of</p>
-                                        <h6 class="text-uppercase mb-0">Experience</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
-                                    <div class="ps-4">
-                                        <p class="mb-0">Popular</p>
-                                        <h6 class="text-uppercase mb-0">Master Chefs</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Team Start -->
-<div class="container-xxl pt-5 pb-3">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
-            <h1 class="mb-5">Our Master Chefs</h1>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Rakesh Patil</h5>
-                    <small>Head Chef</small><br>
-                    <small>Working Since: 10 Years</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Anita Deshmukh</h5>
-                    <small>Senior Sous Chef</small><br>
-                    <small>Working Since: 4 Years</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Mohit Sharma</h5>
-                    <small>Pastry Chef</small><br>
-                    <small>Working Since: 6 Years</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="img/team-4.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Sunita Kulkarni</h5>
-                    <small>Kitchen Operations Manager</small><br>
-                    <small>Working Since: 15 Years</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-<!-- Team End -->
+    <!-- Navbar & Hero End -->
 
-        
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Shivaji Nagar Pune</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>8668762917</p>
-                        
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>sohamshelar007@gmail.com</p>
-                        
-                        <div class="d-flex pt-2">
-                            
-                            
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/sohamshelar"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/soham-shelar-a86a35250/"><i class="fab fa-linkedin-in"></i></a>
-                            
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+
+        <div class="container">
+
+            <div class="row g-5 align-items-center">
+
+                <!-- About Images -->
+                <div class="col-lg-6">
+
+                    <div class="row g-3">
+
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-100 wow zoomIn"
+                                 data-wow-delay="0.1s"
+                                 src="img/about-1.jpg"
+                                 alt="RestoCafe food">
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-<p>Subscribe to receive product updates, feature rollouts, and exclusive insights directly in your inbox.</p>
 
-<div class="position-relative mx-auto" style="max-width: 400px;">
-    <input 
-        class="form-control border-primary w-100 py-3 ps-4 pe-5" 
-        type="email" 
-        placeholder="Enter your email address"
-        required
-    >
-    <button 
-        type="button" 
-        class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-    >
-        Sign Up
-    </button>
-</div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-75 wow zoomIn"
+                                 data-wow-delay="0.3s"
+                                 src="img/about-2.jpg"
+                                 style="margin-top: 25%;"
+                                 alt="Freshly prepared food">
+                        </div>
+
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-75 wow zoomIn"
+                                 data-wow-delay="0.5s"
+                                 src="img/about-3.jpg"
+                                 alt="Restaurant dining">
+                        </div>
+
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-100 wow zoomIn"
+                                 data-wow-delay="0.7s"
+                                 src="img/about-4.jpg"
+                                 alt="Delicious restaurant dishes">
+                        </div>
 
                     </div>
+
                 </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">RestoCafe</a>, All Right Reserved. 
-							
-							
-							Designed By <a class="border-bottom" href="">Soham</a><br><br>
-                            
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="https://github.com/sohamshelar"">Cookies</a>
-                                <a href="contact.html">Help</a>
-                                
+
+
+                <!-- About Content -->
+                <div class="col-lg-6">
+
+                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">
+                        About Us
+                    </h5>
+
+                    <h1 class="mb-4">
+                        Welcome to
+                        <i class="fa fa-utensils text-primary me-2"></i>RestoCafe
+                    </h1>
+
+                    <p class="mb-4">
+                        <strong>Who We Are</strong><br>
+                        RestoCafe is a cozy neighborhood spot where a love
+                        for great coffee meets a passion for fresh,
+                        flavorful food. Blending the warmth of a cafe
+                        with the comfort of a casual restaurant, we offer
+                        a relaxed place to work, meet, or unwind any time
+                        of day.
+                    </p>
+
+                    <p class="mb-4">
+                        <strong>Our Story</strong><br>
+                        RestoCafe started with a simple idea: create a
+                        place where people could slow down, share good
+                        food, and feel at home. From our signature dishes
+                        to our friendly service, we aim to make every
+                        visit special.
+                    </p>
+
+                    <p class="mb-4">
+                        At RestoCafe, our goal is simple — to create a
+                        place where everyone feels at home. Whether
+                        you're dining in or ordering online, we are
+                        dedicated to offering exceptional taste,
+                        consistent quality, and a memorable experience
+                        every time.
+                    </p>
+
+
+                    <!-- Additional Information: Hidden Initially -->
+                    <div id="moreInfo" hidden>
+
+                        <hr>
+
+                        <h4 class="text-primary mb-3">
+                            What Makes RestoCafe Special?
+                        </h4>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Fresh and Quality Ingredients
+                            </strong><br>
+                            We focus on fresh ingredients and carefully
+                            prepared dishes to deliver delicious food
+                            and satisfying meals to our customers.
+                        </p>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Our Delicious Menu
+                            </strong><br>
+                            From delicious breakfasts and tasty snacks
+                            to flavorful main courses, desserts, and
+                            refreshing beverages, our menu offers
+                            something for everyone.
+                        </p>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Friendly Customer Service
+                            </strong><br>
+                            Our team works to provide a welcoming
+                            atmosphere where families, friends, and
+                            colleagues can enjoy their time together.
+                        </p>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Comfortable Atmosphere
+                            </strong><br>
+                            Whether you want to enjoy a peaceful coffee
+                            break, celebrate a special occasion, or share
+                            a meal with friends, RestoCafe is a place to
+                            relax and connect.
+                        </p>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Our Mission
+                            </strong><br>
+                            Our mission is to serve delicious food,
+                            provide warm hospitality, and create memorable
+                            dining experiences for every guest.
+                        </p>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Our Vision
+                            </strong><br>
+                            We aim to become a favorite neighborhood
+                            destination for great food, quality coffee,
+                            friendly service, and enjoyable moments.
+                        </p>
+
+                        <p class="mb-3">
+                            <strong>
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                Customer Satisfaction
+                            </strong><br>
+                            We value customer feedback and continuously
+                            strive to improve our food, service, and
+                            overall dining experience.
+                        </p>
+
+                        <p class="mb-4">
+                            Thank you for choosing RestoCafe. We look
+                            forward to welcoming you and making your
+                            dining experience special!
+                        </p>
+
+                    </div>
+
+
+                    <!-- Read More / Read Less Button -->
+                    <button type="button"
+                            id="readMoreBtn"
+                            class="btn btn-primary py-3 px-5 mt-2"
+                            aria-expanded="false"
+                            aria-controls="moreInfo"
+                            onclick="toggleReadMore()">
+                        Read More
+                    </button>
+
+
+                    <!-- Experience and Chefs Counters -->
+                    <div class="row g-4 mb-4 mt-3">
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+
+                                <h1 class="flex-shrink-0 display-5 text-primary mb-0"
+                                    data-toggle="counter-up">15</h1>
+
+                                <div class="ps-4">
+                                    <p class="mb-0">Years of</p>
+                                    <h6 class="text-uppercase mb-0">Experience</h6>
+                                </div>
+
                             </div>
                         </div>
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+
+                                <h1 class="flex-shrink-0 display-5 text-primary mb-0"
+                                    data-toggle="counter-up">50</h1>
+
+                                <div class="ps-4">
+                                    <p class="mb-0">Popular</p>
+                                    <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+
+                <h5 class="section-title ff-secondary text-center text-primary fw-normal">
+                    Team Members
+                </h5>
+
+                <h1 class="mb-5">Our Master Chefs</h1>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Chef 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp"
+                     data-wow-delay="0.1s">
+
+                    <div class="team-item text-center rounded overflow-hidden">
+
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                 src="img/team-1.jpg"
+                                 alt="Rakesh Patil, Head Chef">
+                        </div>
+
+                        <h5 class="mb-0">Rakesh Patil</h5>
+                        <small>Head Chef</small><br>
+                        <small>Working Since: 10 Years</small>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
+
+
+                <!-- Chef 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp"
+                     data-wow-delay="0.3s">
+
+                    <div class="team-item text-center rounded overflow-hidden">
+
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                 src="img/team-2.jpg"
+                                 alt="Anita Deshmukh, Senior Sous Chef">
+                        </div>
+
+                        <h5 class="mb-0">Anita Deshmukh</h5>
+                        <small>Senior Sous Chef</small><br>
+                        <small>Working Since: 4 Years</small>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Chef 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp"
+                     data-wow-delay="0.5s">
+
+                    <div class="team-item text-center rounded overflow-hidden">
+
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                 src="img/team-3.jpg"
+                                 alt="Mohit Sharma, Pastry Chef">
+                        </div>
+
+                        <h5 class="mb-0">Mohit Sharma</h5>
+                        <small>Pastry Chef</small><br>
+                        <small>Working Since: 6 Years</small>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Chef 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp"
+                     data-wow-delay="0.7s">
+
+                    <div class="team-item text-center rounded overflow-hidden">
+
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                 src="img/team-4.jpg"
+                                 alt="Sunita Kulkarni, Kitchen Operations Manager">
+                        </div>
+
+                        <h5 class="mb-0">Sunita Kulkarni</h5>
+                        <small>Kitchen Operations Manager</small><br>
+                        <small>Working Since: 15 Years</small>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-square btn-primary mx-1"
+                               href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
         </div>
-        <!-- Footer End -->
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <!-- Team End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+         data-wow-delay="0.1s">
+
+        <div class="container py-5">
+
+            <div class="row g-5">
+
+                <!-- Company -->
+                <div class="col-lg-3 col-md-6">
+
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">
+                        Company
+                    </h4>
+
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="booking.html">Reservation</a>
+                    <a class="btn btn-link" href="#">Privacy Policy</a>
+                    <a class="btn btn-link" href="#">Terms &amp; Conditions</a>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">
+                        Contact
+                    </h4>
+
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>
+                        Shivaji Nagar, Pune
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i>
+                        8668762917
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:sohamshelar007@gmail.com"
+                           class="text-light">
+                            sohamshelar007@gmail.com
+                        </a>
+                    </p>
+
+                    <div class="d-flex pt-2">
+
+                        <a class="btn btn-outline-light btn-social"
+                           href="https://github.com/sohamshelar"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a class="btn btn-outline-light btn-social"
+                           href="https://www.linkedin.com/in/soham-shelar-a86a35250/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Opening Hours -->
+                <div class="col-lg-3 col-md-6">
+
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">
+                        Opening
+                    </h4>
+
+                    <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                    <p>09 AM - 09 PM</p>
+
+                    <h5 class="text-light fw-normal">Sunday</h5>
+                    <p>10 AM - 08 PM</p>
+
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6">
+
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">
+                        Newsletter
+                    </h4>
+
+                    <p>
+                        Subscribe to receive restaurant updates, new menu
+                        announcements, and special offers.
+                    </p>
+
+                    <form id="newsletterForm"
+                          class="position-relative mx-auto"
+                          style="max-width: 400px;">
+
+                        <label for="newsletterEmail"
+                               class="visually-hidden">
+                            Email address
+                        </label>
+
+                        <input
+                            id="newsletterEmail"
+                            class="form-control border-primary w-100 py-3 ps-4 pe-5"
+                            type="email"
+                            placeholder="Enter your email address"
+                            required>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            Sign Up
+                        </button>
+
+                    </form>
+
+                    <p id="newsletterMessage"
+                       class="mt-2"
+                       aria-live="polite"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="container">
+
+            <div class="copyright">
+
+                <div class="row">
+
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+
+                        &copy; <a class="border-bottom" href="index.html">RestoCafe</a>,
+                        All Rights Reserved.
+
+                        <br><br>
+
+                        Designed By
+                        <a class="border-bottom" href="#">Soham</a>
+
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="contact.html">Contact</a>
+                            <a href="#">Cookies</a>
+                            <a href="contact.html">Help</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#"
+       class="btn btn-lg btn-primary btn-lg-square back-to-top"
+       aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+<!-- Read More / Read Less JavaScript -->
+<script>
+    function toggleReadMore() {
+        const moreInfo = document.getElementById("moreInfo");
+        const button = document.getElementById("readMoreBtn");
+
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+        moreInfo.hidden = isExpanded;
+        button.setAttribute("aria-expanded", String(!isExpanded));
+
+        button.textContent = isExpanded ? "Read More" : "Read Less";
+    }
+
+
+    // Newsletter form demonstration
+    document.getElementById("newsletterForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("newsletterEmail").value.trim();
+        const message = document.getElementById("newsletterMessage");
+
+        if (email) {
+            message.textContent = "Thank you for your interest in RestoCafe!";
+            this.reset();
+        }
+    });
+</script>
+
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
 </body>
-
 </html>

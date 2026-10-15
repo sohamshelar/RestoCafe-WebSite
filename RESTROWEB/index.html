@@ -1,641 +1,911 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Restocafe-home-2025</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <title>RestoCafe - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enjoy delicious food and book your table at RestoCafe.">
 
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
+    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+    <!-- Libraries -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap and Custom CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .mail-btn {
+            padding: 16px 42px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: .5px;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #5f2cff, #ffc250, #ff4dd2);
+            background-size: 300% 300%;
+            cursor: pointer;
+            transition: all .4s ease;
+            animation: gradientFlow 6s ease infinite;
+            box-shadow: 0 10px 30px rgba(160, 90, 255, .36);
+        }
+
+        .mail-btn:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 18px 45px rgba(160, 90, 255, .55);
+            color: white;
+        }
+
+        .mail-btn:active {
+            transform: scale(.96);
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .booking-modal .modal-content {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .booking-modal .modal-header {
+            background: #0f172b;
+            color: white;
+            padding: 20px 24px;
+        }
+
+        .booking-modal .modal-title {
+            color: #fea116;
+            font-weight: 800;
+        }
+
+        .booking-modal .modal-body {
+            padding: 25px;
+        }
+
+        .booking-modal .form-control,
+        .booking-modal .form-select {
+            min-height: 48px;
+            border-radius: 8px;
+        }
+
+        .booking-modal .form-label {
+            font-weight: 600;
+        }
+
+        .booking-modal .btn-primary {
+            border-radius: 8px;
+        }
+
+        .booking-modal .modal-header .btn-close {
+            filter: invert(1);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+
+<div class="container-xxl bg-white p-0">
+
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
 
+    <!-- Navbar and Hero -->
+    <div class="container-xxl position-relative p-0">
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>RestoCafe</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="text-primary m-0">
+                    <i class="fa fa-utensils me-3"></i>RestoCafe
+                </h1>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="menu.html" class="nav-item nav-link">Menu</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+
+                <a href="#bookingModal" class="btn btn-primary py-2 px-4" data-bs-toggle="modal">
+                    Book A Table
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </nav>
+
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container my-5 py-5">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-3 text-white animated slideInLeft">
+                            Enjoy Our<br>Delicious Meal
+                        </h1>
+
+                        <p class="text-white animated slideInLeft mb-4 pb-2">
+                            Experience the perfect mix of flavor and warmth.
+                            Every dish is crafted with fresh ingredients and a
+                            touch of passion. Join us for a memorable dining
+                            experience that delights the senses.
+                        </p>
+
+                        <a href="#bookingModal"
+                           class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft"
+                           data-bs-toggle="modal">
+                            Book A Table
+                        </a>
+
+                        <button class="mail-btn"
+                            onclick="window.location.href='mailto:Shashankmankar412@gmail.com?subject=Professional%20Inquiry'">
+                            Email Us
+                        </button>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
-                </div>
-            </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container my-5 py-5">
-                    <div class="row align-items-center g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Experience the perfect mix of flavor and warmth. Every dish is crafted with fresh ingredients and a touch of passion. Join us for a memorable dining experience that delights the senses.</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <style>
-
-                                
-.mail-btn {
-    padding: 16px 42px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: .5px;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(135deg,#5f2cff,#ffc250,#ff4dd2);
-    background-size: 300% 300%;
-    cursor: pointer;
-    transition: all .4s ease;
-    animation: gradientFlow 6s ease infinite;
-    box-shadow: 0 10px 30px rgba(160,90,255,.36);
-}
-
-.mail-btn:hover {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 18px 45px rgba(160,90,255,.55);
-}
-
-.mail-btn:active {
-    transform: scale(.70);
-}
-
-@keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-</style>
-
-<button class="mail-btn" onclick="window.location.href='mailto:Shashankmankar412@gmail.com?subject=Professional%20Inquiry'">
-Email Us
-</button>
-
-
-
-
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="img/hero.png" alt="">
-                        </div>
+                    <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                        <img class="img-fluid" src="img/hero.png" alt="Delicious restaurant food">
                     </div>
+
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
 
+    <!-- Services -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
 
-        <!-- Service Start -->
-       <div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
-                        <h5>Master Chefs</h5>
-                        <p>Our talented chefs bring years of experience and creativity to every plate, serving dishes that are both authentic and innovative.</p>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                            <h5>Master Chefs</h5>
+                            <p>Our talented chefs bring years of experience and creativity to every plate, serving dishes that are both authentic and innovative.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
-                        <h5>Quality Food</h5>
-                        <p>We use fresh, carefully selected ingredients to prepare flavorful meals that highlight true taste in every bite.</p>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                            <h5>Quality Food</h5>
+                            <p>We use fresh, carefully selected ingredients to prepare flavorful meals that highlight true taste in every bite.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-                        <h5>Online Order</h5>
-                        <p>Order your favorites online in just a few clicks and enjoy our food at home, at work, or on the go.</p>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
+                            <h5>Online Order</h5>
+                            <p>Order your favorites online in just a few clicks and enjoy our food at home, at work, or on the go.</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                            <h5>24/7 Service</h5>
+                            <p>Our team is always ready to assist you with reservations, orders, and any questions at any time.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-headset text-primary mb-4"></i>
-                        <h5>24/7 Service</h5>
-                        <p>Our team is always ready to assist you with reservations, orders, and any questions at any time.</p>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" alt="Restaurant interior">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;" alt="Restaurant dining">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg" alt="Fresh food">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg" alt="Restaurant meal">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
+                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>RestoCafe</h1>
+
+                    <p class="mb-4">
+                        RestoCafe is a cozy spot where great food, warm ambiance,
+                        and friendly service come together. From quick bites to
+                        relaxed family dinners, we aim to make every visit special.
+                    </p>
+
+                    <p class="mb-4">
+                        Our menu features classic favorites and chef specials,
+                        prepared with fresh ingredients and careful attention
+                        to detail. Whether you dine in, take away, or order online,
+                        we are here to serve you a satisfying experience.
+                    </p>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
+                                <div class="ps-4">
+                                    <p class="mb-0">Years of</p>
+                                    <h6 class="text-uppercase mb-0">Experience</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                <div class="ps-4">
+                                    <p class="mb-0">Popular</p>
+                                    <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">Read More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="container-xxl py-5">
+        <div class="container">
+
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+                <h1 class="mb-5">Most Popular Items</h1>
+            </div>
+
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+
+                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                            <i class="fa fa-coffee fa-2x text-primary"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Popular</small>
+                                <h6 class="mt-n1 mb-0">Breakfast</h6>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                            <i class="fa fa-hamburger fa-2x text-primary"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Special</small>
+                                <h6 class="mt-n1 mb-0">Lunch</h6>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                            <i class="fa fa-utensils fa-2x text-primary"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Lovely</small>
+                                <h6 class="mt-n1 mb-0">Dinner</h6>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <!-- Breakfast -->
+                    <div id="tab-1" class="tab-pane fade show active p-0">
+                        <div class="row g-4">
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-1.jpg" class="img-fluid rounded" style="width:80px" alt="Masala Dosa">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Masala Dosa</span><span class="text-primary">₹90</span>
+                                        </h5>
+                                        <small class="fst-italic">Crispy dosa with potato masala.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-2.jpg" class="img-fluid rounded" style="width:80px" alt="Chole Bhature">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Chole Bhature</span><span class="text-primary">₹120</span>
+                                        </h5>
+                                        <small class="fst-italic">Spicy chole with fluffy bhature.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-3.jpg" class="img-fluid rounded" style="width:80px" alt="Poha">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Poha</span><span class="text-primary">₹70</span>
+                                        </h5>
+                                        <small class="fst-italic">Light, healthy breakfast option.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-4.jpg" class="img-fluid rounded" style="width:80px" alt="Aloo Paratha">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Aloo Paratha</span><span class="text-primary">₹85</span>
+                                        </h5>
+                                        <small class="fst-italic">Stuffed paratha with curd.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-5.jpg" class="img-fluid rounded" style="width:80px" alt="Idli Sambar">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Idli Sambar</span><span class="text-primary">₹75</span>
+                                        </h5>
+                                        <small class="fst-italic">Steamed idli with sambar.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-6.jpg" class="img-fluid rounded" style="width:80px" alt="Paneer Sandwich">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Paneer Sandwich</span><span class="text-primary">₹95</span>
+                                        </h5>
+                                        <small class="fst-italic">Grilled paneer sandwich.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Lunch -->
+                    <div id="tab-2" class="tab-pane fade p-0">
+                        <div class="row g-4">
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-1.jpg" class="img-fluid rounded" style="width:80px" alt="Butter Chicken">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Butter Chicken</span><span class="text-primary">₹260</span>
+                                        </h5>
+                                        <small class="fst-italic">Creamy tomato chicken curry.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-2.jpg" class="img-fluid rounded" style="width:80px" alt="Paneer Butter Masala">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Paneer Butter Masala</span><span class="text-primary">₹220</span>
+                                        </h5>
+                                        <small class="fst-italic">Rich paneer gravy.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-3.jpg" class="img-fluid rounded" style="width:80px" alt="Hyderabadi Biryani">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Hyderabadi Biryani</span><span class="text-primary">₹240</span>
+                                        </h5>
+                                        <small class="fst-italic">Aromatic dum biryani.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-4.jpg" class="img-fluid rounded" style="width:80px" alt="Dal Tadka">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Dal Tadka</span><span class="text-primary">₹160</span>
+                                        </h5>
+                                        <small class="fst-italic">Yellow dal with ghee tadka.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Dinner -->
+                    <div id="tab-3" class="tab-pane fade p-0">
+                        <div class="row g-4">
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-1.jpg" class="img-fluid rounded" style="width:80px" alt="Tandoori Chicken">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Tandoori Chicken</span><span class="text-primary">₹280</span>
+                                        </h5>
+                                        <small class="fst-italic">Char-grilled chicken marinated with yogurt, lemon juice and spices.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-2.jpg" class="img-fluid rounded" style="width:80px" alt="Dal Makhani">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Dal Makhani</span><span class="text-primary">₹150</span>
+                                        </h5>
+                                        <small class="fst-italic">Slow-cooked lentils finished with cream and butter.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-3.jpg" class="img-fluid rounded" style="width:80px" alt="Malai Kofta">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Malai Kofta</span><span class="text-primary">₹200</span>
+                                        </h5>
+                                        <small class="fst-italic">Soft vegetable and paneer dumplings in creamy gravy.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-4.jpg" class="img-fluid rounded" style="width:80px" alt="Kadhai Paneer">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Kadhai Paneer</span><span class="text-primary">₹350</span>
+                                        </h5>
+                                        <small class="fst-italic">Paneer with onions, capsicum and spicy kadhai masala.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-5.jpg" class="img-fluid rounded" style="width:80px" alt="Fish Curry">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Fish Curry</span><span class="text-primary">₹450</span>
+                                        </h5>
+                                        <small class="fst-italic">Coastal-style fish cooked in a tangy spiced gravy.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-6.jpg" class="img-fluid rounded" style="width:80px" alt="Mutton Rogan Josh">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Mutton Rogan Josh</span><span class="text-primary">₹480</span>
+                                        </h5>
+                                        <small class="fst-italic">Kashmiri-style lamb curry cooked with yogurt and spices.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-7.jpg" class="img-fluid rounded" style="width:80px" alt="Veg Thali">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Veg Thali</span><span class="text-primary">₹180</span>
+                                        </h5>
+                                        <small class="fst-italic">Vegetarian curries, dal, rice, roti, salad and dessert.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/menu-8.jpg" class="img-fluid rounded" style="width:80px" alt="Garlic Naan">
+                                    <div class="ps-4 w-100">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Garlic Naan</span><span class="text-primary">₹40</span>
+                                        </h5>
+                                        <small class="fst-italic">Soft tandoor naan topped with garlic and coriander.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#bookingModal" data-bs-toggle="modal">Reservation</a>
+                    <a class="btn btn-link" href="#">Privacy Policy</a>
+                    <a class="btn btn-link" href="#">Terms &amp; Conditions</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Shivaji Nagar, Pune</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>8668762917</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>sohamshelar007@gmail.com</p>
+
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/sohamshelar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/soham-shelar-a86a35250/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
+                    <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                    <p>09AM - 09PM</p>
+                    <h5 class="text-light fw-normal">Sunday</h5>
+                    <p>10AM - 08PM</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
+                    <p>Subscribe to receive product updates, feature rollouts and exclusive insights directly in your inbox.</p>
+
+                    <form class="position-relative mx-auto" style="max-width:400px;" onsubmit="event.preventDefault(); alert('Newsletter signup requires a connected email service.');">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5"
+                               type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            Sign Up
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html">RestoCafe</a>, All Rights Reserved.
+                        <br><br>
+                        Designed By <a class="border-bottom" href="https://github.com/sohamshelar" target="_blank" rel="noopener noreferrer">Soham</a>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="contact.html">Contact</a>
+                            <a href="#">Cookies</a>
+                            <a href="contact.html">Help</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Service End -->
 
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-                <div class="row g-3">
-                    <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
-                    </div>
-                    <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
-                    </div>
-                    <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
-                    </div>
-                    <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
-                    </div>
-                </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+</div>
+
+<!-- BOOKING FORM MODAL -->
+<div class="modal fade booking-modal" id="bookingModal" tabindex="-1"
+     aria-labelledby="bookingModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalLabel">
+                    <i class="fa fa-utensils me-2"></i>Book Your Table
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
-            <div class="col-lg-6">
-                <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>RestoCafe</h1>
-                <p class="mb-4">
-                    RestoCafe is a cozy spot where great food, warm ambiance, and friendly service come together. 
-                    From quick bites to relaxed family dinners, we aim to make every visit feel special.
+
+            <div class="modal-body">
+
+                <p class="text-muted mb-4">
+                    Fill in your details to request a table reservation at RestoCafe.
                 </p>
-                <p class="mb-4">
-                    Our menu features a mix of classic favorites and chef specials, all prepared with fresh ingredients and careful attention to detail. 
-                    Whether you dine in, take away, or order online, we are here to serve you a satisfying experience.
-                </p>
-                <div class="row g-4 mb-4">
-                    <div class="col-sm-6">
-                        <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                            <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
-                            <div class="ps-4">
-                                <p class="mb-0">Years of</p>
-                                <h6 class="text-uppercase mb-0">Experience</h6>
-                            </div>
-                        </div>
+
+                <form id="bookingForm">
+
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customerName"
+                               name="customerName" placeholder="Enter your full name"
+                               minlength="2" maxlength="100"
+                               autocomplete="name" required>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                            <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
-                            <div class="ps-4">
-                                <p class="mb-0">Popular</p>
-                                <h6 class="text-uppercase mb-0">Master Chefs</h6>
-                            </div>
-                        </div>
+
+                    <div class="mb-3">
+                        <label for="tableNumber" class="form-label">Table Number</label>
+                        <select class="form-select" id="tableNumber"
+                                name="tableNumber" required>
+                            <option value="">Select a table</option>
+                            <option value="1">Table 1</option>
+                            <option value="2">Table 2</option>
+                            <option value="3">Table 3</option>
+                            <option value="4">Table 4</option>
+                            <option value="5">Table 5</option>
+                            <option value="6">Table 6</option>
+                            <option value="7">Table 7</option>
+                            <option value="8">Table 8</option>
+                            <option value="9">Table 9</option>
+                            <option value="10">Table 10</option>
+                        </select>
                     </div>
-                </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+
+                    <div class="mb-3">
+                        <label for="bookingDate" class="form-label">Booking Date</label>
+                        <input type="date" class="form-control" id="bookingDate"
+                               name="bookingDate" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="bookingTime" class="form-label">Booking Time</label>
+                        <input type="time" class="form-control" id="bookingTime"
+                               name="bookingTime" min="09:00" max="21:00" required>
+                        <small class="text-muted">Booking time: 9:00 AM to 9:00 PM.</small>
+                    </div>
+
+                    <button type="submit" id="confirmBooking"
+                            class="btn btn-primary w-100 py-3">
+                        <i class="fa fa-calendar-check me-2"></i>Confirm Booking
+                    </button>
+
+                </form>
+
+                <div id="bookingConfirmation"
+                     class="alert alert-success mt-3 d-none"
+                     role="status" aria-live="polite"></div>
+
             </div>
         </div>
     </div>
 </div>
-<!-- About End -->
 
-        <!-- About End -->
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
+<!-- Template JavaScript -->
+<script src="js/main.js"></script>
 
-<!-- Menu Start -->
-<div class="container-xxl py-5">
-  <div class="container">
+<!-- Booking Form JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
 
-    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-      <h1 class="mb-5">Most Popular Items</h1>
-    </div>
+        const bookingForm = document.getElementById("bookingForm");
+        const bookingDateInput = document.getElementById("bookingDate");
+        const bookingTimeInput = document.getElementById("bookingTime");
+        const confirmation = document.getElementById("bookingConfirmation");
+        const submitButton = document.getElementById("confirmBooking");
+        const bookingModal = document.getElementById("bookingModal");
 
-    <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+        // Get today's date using local time
+        function getLocalDate() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, "0");
+            const day = String(now.getDate()).padStart(2, "0");
 
-      <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-        <li class="nav-item">
-          <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-            <i class="fa fa-coffee fa-2x text-primary"></i>
-            <div class="ps-3">
-              <small class="text-body">Popular</small>
-              <h6 class="mt-n1 mb-0">Breakfast</h6>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-            <i class="fa fa-hamburger fa-2x text-primary"></i>
-            <div class="ps-3">
-              <small class="text-body">Special</small>
-              <h6 class="mt-n1 mb-0">Lunch</h6>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-            <i class="fa fa-utensils fa-2x text-primary"></i>
-            <div class="ps-3">
-              <small class="text-body">Lovely</small>
-              <h6 class="mt-n1 mb-0">Dinner</h6>
-            </div>
-          </a>
-        </li>
-      </ul>
+            return `${year}-${month}-${day}`;
+        }
 
-      <div class="tab-content">
+        bookingDateInput.min = getLocalDate();
 
-        <!-- BREAKFAST -->
-        <div id="tab-1" class="tab-pane fade show active p-0">
-          <div class="row g-4">
+        // Validate date and time whenever either field changes
+        function validateBookingDateTime() {
+            const selectedDate = bookingDateInput.value;
+            const selectedTime = bookingTimeInput.value;
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-1.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Masala Dosa</span><span class="text-primary">₹90</span>
-                  </h5>
-                  <small class="fst-italic">Crispy dosa with potato masala.</small>
-                </div>
-              </div>
-            </div>
+            bookingTimeInput.setCustomValidity("");
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-2.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Chole Bhature</span><span class="text-primary">₹120</span>
-                  </h5>
-                  <small class="fst-italic">Spicy chole with fluffy bhature.</small>
-                </div>
-              </div>
-            </div>
+            if (selectedDate === getLocalDate() &&
+                selectedTime &&
+                selectedTime < new Date().toTimeString().slice(0, 5)) {
+                bookingTimeInput.setCustomValidity(
+                    "Please select a future time."
+                );
+            }
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-3.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Poha</span><span class="text-primary">₹70</span>
-                  </h5>
-                  <small class="fst-italic">Light, healthy breakfast option.</small>
-                </div>
-              </div>
-            </div>
+            if (selectedTime &&
+                (selectedTime < "09:00" || selectedTime > "21:00")) {
+                bookingTimeInput.setCustomValidity(
+                    "Please select a time between 9:00 AM and 9:00 PM."
+                );
+            }
+        }
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-4.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Aloo Paratha</span><span class="text-primary">₹85</span>
-                  </h5>
-                  <small class="fst-italic">Stuffed paratha with curd.</small>
-                </div>
-              </div>
-            </div>
+        bookingDateInput.addEventListener("change", validateBookingDateTime);
+        bookingTimeInput.addEventListener("change", validateBookingDateTime);
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-5.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Idli Sambar</span><span class="text-primary">₹75</span>
-                  </h5>
-                  <small class="fst-italic">Steamed idli with sambar.</small>
-                </div>
-              </div>
-            </div>
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-6.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Paneer Sandwich</span><span class="text-primary">₹95</span>
-                  </h5>
-                  <small class="fst-italic">Grilled paneer sandwich.</small>
-                </div>
-              </div>
-            </div>
+            validateBookingDateTime();
 
-          </div>
-        </div>
+            if (!bookingForm.checkValidity()) {
+                bookingForm.reportValidity();
+                return;
+            }
 
-        <!-- LUNCH -->
-        <div id="tab-2" class="tab-pane fade p-0">
-          <div class="row g-4">
+            const customerName =
+                document.getElementById("customerName").value.trim();
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-1.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Butter Chicken</span><span class="text-primary">₹260</span>
-                  </h5>
-                  <small class="fst-italic">Creamy tomato chicken curry.</small>
-                </div>
-              </div>
-            </div>
+            const tableNumber =
+                document.getElementById("tableNumber").value;
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-2.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Paneer Butter Masala</span><span class="text-primary">₹220</span>
-                  </h5>
-                  <small class="fst-italic">Rich paneer gravy.</small>
-                </div>
-              </div>
-            </div>
+            const selectedDate = bookingDateInput.value;
+            const selectedTime = bookingTimeInput.value;
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-3.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Hyderabadi Biryani</span><span class="text-primary">₹240</span>
-                  </h5>
-                  <small class="fst-italic">Aromatic dum biryani.</small>
-                </div>
-              </div>
-            </div>
+            if (customerName.length < 2) {
+                alert("Please enter a valid customer name.");
+                return;
+            }
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-4.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Dal Tadka</span><span class="text-primary">₹160</span>
-                  </h5>
-                  <small class="fst-italic">Yellow dal with ghee tadka.</small>
-                </div>
-              </div>
-            </div>
+            if (selectedDate < getLocalDate()) {
+                alert("Please select today or a future date.");
+                return;
+            }
 
-          </div>
-        </div>
+            const formattedDate = new Date(selectedDate + "T00:00:00")
+                .toLocaleDateString("en-IN", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric"
+                });
 
-        <!-- DINNER -->
-        <div id="tab-3" class="tab-pane fade p-0">
-          <div class="row g-4">
+            const [hours, minutes] = selectedTime.split(":").map(Number);
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-1.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Tandoori Chicken</span><span class="text-primary">₹280</span>
-                  </h5>
-                  <small class="fst-italic">Char-grilled chicken marinated in yogurt, lemon juice, and tandoori spices.</small>
-                </div>
-              </div>
-            </div>
+            const formattedTime = new Date(2000, 0, 1, hours, minutes)
+                .toLocaleTimeString("en-IN", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    hour12: true
+                });
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-2.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Dal Makhani</span><span class="text-primary">₹150</span>
-                  </h5>
-                  <small class="fst-italic">Slow-cooked black lentils and kidney beans finished with cream and butter.</small>
-                </div>
-              </div>
-            </div>
+            // Use textContent to display customer input safely
+            confirmation.replaceChildren();
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-3.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Malai Kofta</span><span class="text-primary">₹200</span>
-                  </h5>
-                  <small class="fst-italic">Soft vegetable and paneer dumplings served in a rich, creamy gravy.</small>
-                </div>
-              </div>
-            </div>
+            const heading = document.createElement("h5");
+            heading.textContent = "Booking Submitted Successfully!";
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-4.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Kadhai Paneer</span><span class="text-primary">₹350</span>
-                  </h5>
-                  <small class="fst-italic">Paneer tossed with onions and capsicum in a spicy kadhai masala gravy.</small>
-                </div>
-              </div>
-            </div>
+            const details = document.createElement("p");
+            details.className = "mb-2";
+            details.textContent =
+                `Customer: ${customerName} | Table: ${tableNumber} | Date: ${formattedDate} | Time: ${formattedTime}`;
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-5.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Fish Curry</span><span class="text-primary">₹450</span>
-                  </h5>
-                  <small class="fst-italic">Coastal-style fish simmered in tangy, spiced coconut or tomato-based gravy.</small>
-                </div>
-              </div>
-            </div>
+            const note = document.createElement("small");
+            note.textContent =
+                "Demo only: this request has not been saved to a database or confirmed against table availability.";
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-6.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Mutton Rogan Josh</span><span class="text-primary">₹480</span>
-                  </h5>
-                  <small class="fst-italic">Kashmiri-style lamb curry cooked with yogurt and warm spices.</small>
-                </div>
-              </div>
-            </div>
+            confirmation.append(heading, details, note);
+            confirmation.classList.remove("d-none");
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-7.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Veg Thali</span><span class="text-primary">₹180</span>
-                  </h5>
-                  <small class="fst-italic">Assorted vegetarian curries, dal, rice, roti, salad, and dessert platter.</small>
-                </div>
-              </div>
-            </div>
+            submitButton.disabled = true;
+            submitButton.textContent = "Booking Submitted";
 
-            <div class="col-lg-6">
-              <div class="d-flex align-items-center">
-                <img src="img/menu-8.jpg" class="img-fluid rounded" style="width:80px">
-                <div class="ps-4 w-100">
-                  <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>Garlic Naan</span><span class="text-primary">₹40</span>
-                  </h5>
-                  <small class="fst-italic">Soft tandoor naan topped with garlic and coriander.</small>
-                </div>
-              </div>
-            </div>
+            // Close the modal after displaying the confirmation
+            window.setTimeout(function () {
+                bootstrap.Modal.getOrCreateInstance(bookingModal).hide();
+            }, 4000);
+        });
 
-          </div>
-        </div>
+        // Reset the form when the popup closes
+        bookingModal.addEventListener("hidden.bs.modal", function () {
+            bookingForm.reset();
+            bookingDateInput.min = getLocalDate();
 
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Menu End -->
+            confirmation.classList.add("d-none");
+            confirmation.replaceChildren();
 
+            submitButton.disabled = false;
+            submitButton.innerHTML =
+                '<i class="fa fa-calendar-check me-2"></i>Confirm Booking';
+        });
 
+    });
+</script>
 
-
-
- <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Shivaji Nagar Pune</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>8668762917</p>
-                        
-                    
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>sohamshelar007@gmail.com</p>
-                       
-                        <div class="d-flex pt-2">
-                              
-                            
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/sohamshelar"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/soham-shelar-a86a35250/"><i class="fab fa-linkedin-in"></i></a>
-                            
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                       <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-<p>Subscribe to receive product updates, feature rollouts, and exclusive insights directly in your inbox.</p>
-
-<div class="position-relative mx-auto" style="max-width: 400px;">
-    <input 
-        class="form-control border-primary w-100 py-3 ps-4 pe-5" 
-        type="email" 
-        placeholder="Enter your email address"
-        required
-    >
-    <button 
-        type="button" 
-        class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-    >
-        Sign Up
-    </button>
-</div>
-
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">RestoCafe</a>, All Right Reserved. 
-							
-							
-							Designed By <a class="border-bottom" href="">Soham</a><br><br>
-                            
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="https://github.com/sohamshelar"">Cookies</a>
-                                <a href="contact.html">Help</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
-
 </html>
